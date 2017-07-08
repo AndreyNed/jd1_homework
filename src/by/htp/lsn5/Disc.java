@@ -13,9 +13,14 @@ public class Disc {
 	}
 
 	public Disc( String title, Composition[] compositions ) {
-		super();
 		this.title = title;
 		this.compositions = compositions;
+		defineCompositionIndex();
+	}
+	
+	public Disc( String title, int compositionCount ) {
+		this.title = title;
+		this.compositions = new Composition [ compositionCount ];
 		defineCompositionIndex();
 	}
 	
@@ -30,7 +35,7 @@ public class Disc {
 				}
 			}
 		}
-		System.out.println("lastCompositionIndex = " + this.lastCompositionIndex);
+		//System.out.println("lastCompositionIndex = " + this.lastCompositionIndex);
 	}
 
 	public String getTitle() {
@@ -47,6 +52,11 @@ public class Disc {
 
 	public void setCompositions(Composition[] compositions) {
 		this.compositions = compositions;
+		defineCompositionIndex();
+	}
+	
+	public void setCompositions( int compositionsCount ){
+		compositions = new Composition[ compositionsCount ];
 		defineCompositionIndex();
 	}
 	
@@ -106,7 +116,7 @@ public class Disc {
 	public String infoStr() {
 		String info = "";
 		int totalTime = calculateCompositionsLength();
-		info = "Title: '" + this.title + "'; compositions` count: " + calculateCompositionsCount() + "; total time of compositions: " + Main.intLengthToString( totalTime );
+		info = "Title: '" + this.title + "'; compositions` count: " + calculateCompositionsCount() + " / " + compositions.length + "; total time of compositions: " + Main.intLengthToString( totalTime );
 		return info;
 	}
 	

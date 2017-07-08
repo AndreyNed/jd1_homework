@@ -26,35 +26,28 @@ public class Main {
 		return secValue;
 	}
 	
-	public static void printDiscInfo( Disc disc ){
-		int count = disc.calculateCompositionsCount();
-		
-		System.out.println( "------------------------------------------------" );
-		System.out.println( "Disc: ");
-		System.out.println( "     " + disc.infoStr() );
-		
-		for ( int i = 0; i < count; i++ ) {
-			System.out.println( "------------------------------------------------" );
-			System.out.println( "     " + "Composition:");
-			System.out.println( "     " + disc.getCompositions()[ i ].infoStr() );
-		}
-	
-		System.out.println( "------------------------------------------------" );
-
-	}
-	
 	public static void main(String[] args) {
-		Composition comp1 = new Composition ( "Smoke on the water", 485, "rock" );
+		View view = new View();
 		
-		comp1.setPosition(3);
+		Model model = new Model();
+		model.setView(view);
 		
-		Disc disc1 = new Disc();
-		disc1.setTitle( "The best" );
+		Controller controller = new Controller();
+		controller.setModel(model);
 		
-		disc1.addComposition( comp1 );
-		disc1.addComposition("Soldier of fortune", "rock", 549 );
+		controller.startScan();
 		
-		printDiscInfo( disc1 );
+		//Composition comp1 = new Composition ( "Smoke on the water", 485, "rock" );
+		
+		//comp1.setPosition(3);
+		
+		//Disc disc1 = new Disc();
+		//disc1.setTitle( "The best" );
+		
+		//disc1.addComposition( comp1 );
+		//disc1.addComposition("Soldier of fortune", "rock", 549 );
+		
+		//view.printDiscInfo( disc1 );
 		
 	}
 
