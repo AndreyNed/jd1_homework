@@ -36,7 +36,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws IOException {
-		char[] chars;// = new char[ 40 ];
+		//char[] chars;// = new char[ 40 ];
 		Student student1;
 		Student student2;
 		
