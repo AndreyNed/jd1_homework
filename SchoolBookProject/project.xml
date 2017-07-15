@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project xmlns="http://www.mytestproject.by/home">
+    <name>rus_lang_ru_2017</name>
+    <structure>
+        <section xml:id="preface_1" role="preface">
+            <title>Введение</title>
+        </section>
+        <section xml:id="part_1" role="part">
+            <title label="Часть 1">Название части 1</title>
+            <section xml:id="chapter_1" role="chapter">
+                <title label="Глава 1">Название главы 1</title>
+            </section>
+            <section xml:id="chapter_2" role="chapter">
+                <title label="Глава 2">Название главы 2</title>
+            </section>
+            <section xml:id="chapter_3" role="chapter">
+                <title label="Глава 3">Название главы 3</title>
+            </section>
+            <section xml:id="chapter_4" role="chapter">
+                <title label="Глава 4">Название главы 4</title>
+            </section>
+            <section xml:id="chapter_5" role="chapter">
+                <title label="Глава 5">Название главы 5</title>
+            </section>
+        </section>
+        <section xml:id="part_2" role="part">
+            <title label="Часть 1">Название части 2</title>
+            <section xml:id="chapter_6" role="chapter">
+                <title label="Глава 6">Название главы 6</title>
+            </section>
+            <section xml:id="chapter_7" role="chapter">
+                <title label="Глава 7">Название главы 7</title>
+            </section>
+            <section xml:id="chapter_8" role="chapter">
+                <title label="Глава 8">Название главы 8</title>
+            </section>
+            <section xml:id="chapter_9" role="chapter">
+                <title label="Глава 9">Название главы 9</title>
+            </section>
+            <section xml:id="chapter_10" role="chapter">
+                <title label="Глава 10">Название главы 10</title>
+            </section>
+        </section>
+        <section xml:id="appendix_1" role="appendix">
+            <title label="Приложение 1">Название приложения 1</title>
+        </section>
+    </structure>
+</project>

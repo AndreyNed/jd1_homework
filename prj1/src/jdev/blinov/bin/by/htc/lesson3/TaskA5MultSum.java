@@ -1,4 +1,4 @@
-package by.htc.lesson3;
+package blinov.bin.by.htc.lesson3;
 import java.util.Scanner;
 
 public class TaskA5MultSum {

@@ -5,4 +5,4 @@
  * @author Doc
  *
  */
-package by.htc.lesson3;
+package blinov.bin.by.htc.lesson3;

@@ -46,7 +46,7 @@ public class Main {
 		
 		print( arr1 );
 
-		arr1 = sort ( arr1 );
+		//arr1 = sort ( arr1 );
 	}
 
 }
