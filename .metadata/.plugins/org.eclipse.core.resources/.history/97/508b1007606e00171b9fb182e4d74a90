@@ -1,8 +1,0 @@
-package by.htp.blinov_p126_5b;
-
-public class Disk {
-	
-	private String title;
-	private Record[] records;
-	
-}
