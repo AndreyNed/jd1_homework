@@ -47,8 +47,8 @@ public class Library {
 		}
 	}
 	
-	public void removeItemByTitle( String title ){
-		
+	public Boolean removeItemByTitle( String title ){
+		Boolean result = false;
 		if ( title != null && !title.equals("") ){
 			if ( items != null ){
 				int count = items.length;
@@ -57,6 +57,7 @@ public class Library {
 					if ( title.equalsIgnoreCase( items[ i ].getTitle() ) ){
 						items[ i ] = null;
 						count--;
+						result = true;
 					}
 					newItems[ i ] = items[ i ];
 				}
@@ -70,6 +71,7 @@ public class Library {
 				}
 			}
 		}
+		return result;
 	}
 	
 	public Book[] sortBookByYear () {

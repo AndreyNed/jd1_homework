@@ -10,6 +10,7 @@ public class Controller {
 	private final String OK = "ok";
 	private final String PRINT = "print";
 	private final String ADD_BOOK = "add book";
+	private final String REMOVE = "remove";
 	
 	private Model model;
 	
@@ -46,6 +47,11 @@ public class Controller {
 						addBook();
 					}
 					break;
+				case REMOVE:
+					if ( model != null ) {
+						removeBook();
+					}
+					break;
 			}
 		}
 		
@@ -71,7 +77,16 @@ public class Controller {
 		}
 		Book book = new Book(title, firstName, lastName, year );
 		model.addBookToLibrary(book);
-		
+		System.out.println("Book " + book.getTitle() + " has been added to library");		
+	}
+	
+	private void removeBook() {
+		String title = readLine( "Enter the title of book you`d like to remove: " );
+		if ( model.getLibrary().removeItemByTitle(title) ) {
+			System.out.println("Book " + title + " has been removed from library");
+		} else {
+			System.out.println("Error: book " + title + " wasn`t found in the library");
+		}
 	}
 	
 	private String readLine( String message ){
