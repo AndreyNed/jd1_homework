@@ -1,0 +1,15 @@
+package by.htp.lsn9;
+
+public class B extends A {
+
+	public B() {
+		super();
+		System.out.println("B");
+	}
+	
+	public B( int a ) {
+		this();
+		System.out.println("B int a");
+	}
+	
+}

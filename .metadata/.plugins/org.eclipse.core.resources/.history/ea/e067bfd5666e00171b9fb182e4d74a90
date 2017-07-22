@@ -1,0 +1,13 @@
+
+public class DoThis {
+	
+	public String timeSecToString( int sec ) {
+		String min = "";
+		String hour = "";
+		
+		
+		
+		return ( hour + " : " + min + " : " + sec );
+	}
+
+}

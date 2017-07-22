@@ -1,0 +1,10 @@
+
+public class DoThis {
+	
+	public String timeSecToString( int sec ) {
+		String timeString = "";
+		
+		return timeString;
+	}
+
+}

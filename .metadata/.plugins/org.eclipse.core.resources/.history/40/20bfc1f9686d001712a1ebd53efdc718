@@ -1,0 +1,18 @@
+/**Конструкторы*/
+package by.htp.lsn9;
+
+public class Main {
+
+	public static void main(String[] args) {
+		C c = new C();
+		A a = new C();
+
+		Main main = new Main();
+		main.doSmth();
+	}
+	
+	public void doSmth(){
+		
+	}
+
+}
