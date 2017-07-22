@@ -1,0 +1,16 @@
+package by.htp.blinov_p126_5b;
+
+public class ViewConsole {
+	
+	public void showDiscInfo( Disc disc ) {
+		if ( disc != null ) {
+			System.out.println("-----------------------------------------------");
+			System.out.println("Disc: " + disc.getTitle());
+			for ( int i = 0; i < disc.getRecords().length; i++ ) {
+				System.out.println("    " + i + ". " + disc.getRecords()[ i ].toString());
+			}
+			System.out.println("-----------------------------------------------");
+		}
+	}
+
+}

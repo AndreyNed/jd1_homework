@@ -1,0 +1,12 @@
+package by.htp.lsn9;
+
+public class A {
+	
+	private int a = 1;
+
+	public A() {
+		super();
+		System.out.println("A");
+	}
+	
+}

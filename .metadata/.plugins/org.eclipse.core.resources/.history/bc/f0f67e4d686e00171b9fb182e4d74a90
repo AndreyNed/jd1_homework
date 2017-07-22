@@ -1,0 +1,11 @@
+package by.htp.blinov_p126_5b.run;
+
+public class Main {
+
+	public static void main(String[] args) {
+		by.htp.blinov_p126_5b.Disc disc1 = new Disc( "The best" );
+		
+
+	}
+
+}

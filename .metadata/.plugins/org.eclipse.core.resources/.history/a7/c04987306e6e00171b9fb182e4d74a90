@@ -1,0 +1,28 @@
+package by.htp.blinov_p126_5b;
+
+public class ViewConsole {
+	
+	private Model model;
+	
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(Model model) {
+		this.model = model;
+	}
+
+	public void showDiscInfo() {
+		Disc disc = model.getDisc();
+		if ( disc != null ) {
+			System.out.println("-----------------------------------------------");
+			System.out.println("Disc: " + disc.getTitle());
+			for ( int i = 0; i < disc.getRecords().length; i++ ) {
+				System.out.println("    " + i + ". " + disc.getRecords()[ i ].toString());
+			}
+			System.out.println("Total records: " + disc.getRecords().length + ". Total time of play: " + DoThis.timeSecToString( disc.calculateTotalTime() ) );
+			System.out.println("-----------------------------------------------");
+		}
+	}
+
+}
