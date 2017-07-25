@@ -1,4 +1,4 @@
-package by.htp.taskLibrary;
+package by.htp.task_library;
 
 public class Library {
 	
@@ -82,6 +82,35 @@ public class Library {
 	public Book[] searchBookByAuthorName( String name ){
 		Book[] result = new Book[ 0 ];
 		return result;
+	}
+	
+	public Book[] getBooksByAuthor( String firstName, String lastName ) {
+		Book[] booksA = new Book[ 0 ];
+		int count = 0;
+				
+		for ( PrintedMaterial item : items ) {
+			if ( item.getType().equalsIgnoreCase("book") ) {
+				if ( item.getAuthor().getFirstName().equalsIgnoreCase(firstName) &&
+				     item.getAuthor().getLastName().equalsIgnoreCase(lastName) )  {
+				    	 count++;
+				     }
+			}
+		}
+		
+		booksA = new Book[ count ];
+		count = 0;
+		
+		for ( PrintedMaterial item : items ) {
+			if ( item.getType().equalsIgnoreCase("book") ) {
+				if ( item.getAuthor().getFirstName().equalsIgnoreCase(firstName) &&
+				     item.getAuthor().getLastName().equalsIgnoreCase(lastName) )  {
+					booksA [ count ] = (Book)item;
+				    count++;
+				}
+			}
+		}
+		
+		return booksA;
 	}
 	
 	public void defaultInit() {

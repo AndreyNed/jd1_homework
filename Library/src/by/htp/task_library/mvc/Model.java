@@ -1,5 +1,5 @@
-package by.htp.taskLibrary.mvc;
-import by.htp.taskLibrary.*;
+package by.htp.task_library.mvc;
+import by.htp.task_library.*;
 
 public class Model {
 	
@@ -40,6 +40,15 @@ public class Model {
 	public Model addBookToLibrary( Book book ){
 		library.addItem(book);
 		return this;
+	}
+	
+	public void helpToConsole(){
+		view.showCommands();
+	}
+	
+	public void showBooksByAuthor( String firstName, String lastName ) {
+		Book[] books = library.getBooksByAuthor(firstName, lastName);
+		view.printedMaterialsToConsole(books);
 	}
 	
 	private PrintedMaterial[] getByType ( String type ){

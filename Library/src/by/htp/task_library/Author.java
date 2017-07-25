@@ -1,4 +1,4 @@
-package by.htp.taskLibrary;
+package by.htp.task_library;
 
 public class Author {
 	

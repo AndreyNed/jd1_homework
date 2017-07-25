@@ -1,5 +1,5 @@
-package by.htp.taskLibrary.run;
-import by.htp.taskLibrary.mvc.*;
+package by.htp.task_library.run;
+import by.htp.task_library.mvc.*;
 
 public class Main {
 

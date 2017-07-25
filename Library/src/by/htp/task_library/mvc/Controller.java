@@ -1,8 +1,9 @@
-package by.htp.taskLibrary.mvc;
-import by.htp.taskLibrary.*;
+package by.htp.task_library.mvc;
 import java.lang.Throwable;
 
 import java.util.Scanner;
+
+import by.htp.task_library.*;
 
 public class Controller {
 	
@@ -11,6 +12,8 @@ public class Controller {
 	private final String PRINT = "print";
 	private final String ADD_BOOK = "add book";
 	private final String REMOVE = "remove";
+	private final String showByAUTHOR = "show by author";
+	private final String HELP = "help";
 	
 	private Model model;
 	
@@ -51,6 +54,14 @@ public class Controller {
 					if ( model != null ) {
 						removeBook();
 					}
+					break;
+				case showByAUTHOR:
+					if ( model != null ) {
+						showBooksByAuthor();
+					}
+					break;
+				case HELP:
+					model.helpToConsole();
 					break;
 			}
 		}
@@ -101,6 +112,12 @@ public class Controller {
 			confirmation = scLine.nextLine();
 		}
 		return result;
+	}
+	
+	private void showBooksByAuthor(){
+		String firstName = readLine( "Enter author`s first name:" );
+		String lastName = readLine( "Enter author`s last name:" );
+		model.showBooksByAuthor(firstName, lastName);
 	}
 
 }
