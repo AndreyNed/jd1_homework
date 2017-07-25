@@ -51,6 +51,10 @@ public class Model {
 		view.printedMaterialsToConsole(books);
 	}
 	
+	public void showSortedByAuthor(){
+		view.printedMaterialsToConsole(library.getSortedBooksByAuthors());
+	}
+	
 	private PrintedMaterial[] getByType ( String type ){
 		PrintedMaterial[] result = new PrintedMaterial[ 0 ];
 		int count = 0;

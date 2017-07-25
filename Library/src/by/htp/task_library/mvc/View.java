@@ -21,6 +21,7 @@ public class View {
 		System.out.println();
 		System.out.println("    Total items` count: " + items.length);
 		System.out.println("------------------------------------------------------------");
+		System.out.println();
 	}
 	
 	public void showCommands() {
@@ -30,8 +31,10 @@ public class View {
 		System.out.println("add book       - adds book to library");
 		System.out.println("remove         - removes book from the library by title");
 		System.out.println("show by author - shows commands");
+		System.out.println("sort by author - shows sorted by author books");
 		System.out.println("exit           - exit from application");
 		System.out.println("--------------------------------------------------------");
+		System.out.println();
 	}
 
 }

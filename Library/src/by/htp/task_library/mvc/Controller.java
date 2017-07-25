@@ -7,13 +7,14 @@ import by.htp.task_library.*;
 
 public class Controller {
 	
-	private final String EXIT = "exit";
-	private final String OK = "ok";
-	private final String PRINT = "print";
-	private final String ADD_BOOK = "add book";
-	private final String REMOVE = "remove";
+	private final String EXIT         = "exit";
+	private final String OK           = "ok";
+	private final String PRINT        = "print";
+	private final String ADD_BOOK     = "add book";
+	private final String REMOVE       = "remove";
 	private final String showByAUTHOR = "show by author";
-	private final String HELP = "help";
+	private final String sortByAUTHOR = "sort by author";
+	private final String HELP         = "help";
 	
 	private Model model;
 	
@@ -21,13 +22,9 @@ public class Controller {
 		return model;
 	}
 
-
-
 	public void setModel(Model model) {
 		this.model = model;
 	}
-
-
 
 	public void startCommandReading() {
 		Scanner scLine = new Scanner( System.in );
@@ -63,13 +60,14 @@ public class Controller {
 				case HELP:
 					model.helpToConsole();
 					break;
+				case sortByAUTHOR:
+					model.showSortedByAuthor();
+					break;
 			}
 		}
-		
 	}
 	
 	private void addBook() {
-		
 		String title = readLine("Enter book`s title:");
 		String firstName = readLine("Enter author`s first name:");
 		String lastName = readLine("Enter author`s last name:");
@@ -83,9 +81,7 @@ public class Controller {
 			year = 0;
 			System.out.println("Error input: " + t.toString());
 		}
-		finally{
-			
-		}
+
 		Book book = new Book(title, firstName, lastName, year );
 		model.addBookToLibrary(book);
 		System.out.println("Book " + book.getTitle() + " has been added to library");		

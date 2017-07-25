@@ -35,5 +35,14 @@ public class Author {
 	public String toString() {
 		return firstName + " " + lastName;
 	}
+	
+	public boolean equals ( Author author ) {
+		boolean result = false;
+		if ( author.getFirstName().equalsIgnoreCase(this.firstName) &&
+			 author.getLastName().equalsIgnoreCase(this.lastName) ) {
+			result = true;
+		}
+		return result;
+	}
 
 }
