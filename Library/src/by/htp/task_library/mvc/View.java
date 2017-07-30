@@ -30,7 +30,7 @@ public class View {
 		System.out.println("print          - shows list of books");
 		System.out.println("add book       - adds book to library");
 		System.out.println("remove         - removes book from the library by title");
-		System.out.println("show by author - shows commands");
+		System.out.println("show by author - shows books by author");
 		System.out.println("sort by author - shows sorted by author books");
 		System.out.println("exit           - exit from application");
 		System.out.println("--------------------------------------------------------");

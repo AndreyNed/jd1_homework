@@ -146,5 +146,4 @@ public class Library {
 		books[ 6 ] = new Book( "Дар орла", "Карлос", "Кастанеда", 1981 );
 		this.items = books;
 	}
-	
 }
