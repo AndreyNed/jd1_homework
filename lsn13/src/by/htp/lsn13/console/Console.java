@@ -16,4 +16,16 @@ public class Console {
 		return input;
 	}
 	
+	public static void printStrToInt( String text ) {
+		String text1 = text.toLowerCase();
+		for ( int i = 0; i < text.length(); i++ ){
+			if ( text1.charAt( i ) > 32 ) {
+				System.out.print( (int)( text1.charAt( i ) - (int)'а' + 1 ) + " ");
+			} else {
+				System.out.print( " " );
+			}
+		}
+		System.out.println();
+	}
+	
 }
