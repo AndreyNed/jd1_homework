@@ -12,9 +12,9 @@ public class Main {
 		Library lib1 = new Library( "The best" );
 		
 		try {
-			LibIO.readDefault( lib1 );
+			LibIO.readEditions( "default", lib1 );
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		IOConsole.printEditions( lib1 );

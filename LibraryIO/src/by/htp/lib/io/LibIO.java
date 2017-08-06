@@ -1,8 +1,10 @@
 package by.htp.lib.io;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import by.htp.lib.Author;
@@ -12,11 +14,52 @@ import by.htp.lib.Library;
 
 public class LibIO {
 	
+	private static final String BOOK = "book";
+	private static final String MAGAZIN = "magazin";
+	private static final String DEFAULT_TYPE = "default";
+	private static final String CUSTOM_TYPE = "custom";
 	private static final String DEFAULT_LIB = "lib_db//default.txt";
+	private static final String CUSTOM_LIB = "lib_db//custom.txt";
 	
-	public static Edition[] readDefault ( Library lib ) throws IOException {
+	public static void writeEditions ( String type, Library lib ) {
+		String fileName = null;
+		switch ( type.toLowerCase() ) {
+			case DEFAULT_TYPE:
+				fileName = DEFAULT_LIB;
+				break;
+			case CUSTOM_TYPE:
+				fileName = CUSTOM_LIB;
+				break;
+		}
+		File file = new File( fileName );
+		BufferedWriter bw = null;
+		try {
+			bw = new BufferedWriter( new FileWriter( file ) );
+			for ( int i = 0; i < lib.getEditions().length; i++ ) {
+				//if (  )
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			//bw.close();
+		}
+		
+	}
+	
+	public static Edition[] readEditions ( String type, Library lib ) throws IOException {
 		Edition[] result = null;
-		File file = new File ( DEFAULT_LIB );
+		String fileName = null;
+		switch ( type.toLowerCase() ) {
+			case DEFAULT_TYPE:
+				fileName = DEFAULT_LIB;
+				break;
+			case CUSTOM_TYPE:
+				fileName = CUSTOM_LIB;
+				break;
+		}
+		File file = new File ( fileName );
 		if ( file.exists() ) {
 			//System.out.println("File of default library has been found!");
 			BufferedReader br = null;
@@ -44,11 +87,11 @@ public class LibIO {
 	public static Edition stringToEdition( String line ) {
 		String[] lines = line.split("[|]");
 		Edition result = null;
-		switch ( lines[ 0 ] ) {
-			case "book":
+		switch ( lines[ 0 ].toLowerCase() ) {
+			case BOOK:
 				result = ( Edition )stringToBook( lines );
 				break;
-			case "magazin":
+			case MAGAZIN:
 				break;
 		}
 		return result;
