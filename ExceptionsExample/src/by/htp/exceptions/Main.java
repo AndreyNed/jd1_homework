@@ -21,7 +21,7 @@ public class Main {
 		
 		throw new Throwable("Something wrong happened");*/
 		
-		File f = new File( "c:\\some.txt" );
+		/*File f = new File( "c:\\some.txt" );
 		String s = null;
 		try {
 			s = f.getCanonicalPath();
@@ -37,9 +37,16 @@ public class Main {
 		}
 		finally {
 			System.out.println("Final message");
+		}*/
+		try {
+			SmClass s = new SmClass();
+			s.Method();
+		} catch (Exception e) {
+			System.out.println("Exception in static method");
+			e.printStackTrace();
 		}
 
-		System.out.println( s );
+		System.out.println(  );
 		
 	}
 	
