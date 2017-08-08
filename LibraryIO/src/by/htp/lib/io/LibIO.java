@@ -11,11 +11,12 @@ import by.htp.lib.Author;
 import by.htp.lib.Book;
 import by.htp.lib.Edition;
 import by.htp.lib.Library;
+import by.htp.lib.Magazine;
 
 public class LibIO {
 	
 	private static final String BOOK = "book";
-	private static final String MAGAZIN = "magazin";
+	private static final String MAGAZINE = "magazine";
 	private static final String DEFAULT_TYPE = "default";
 	private static final String CUSTOM_TYPE = "custom";
 	private static final String DEFAULT_LIB = "lib_db//default.txt";
@@ -100,10 +101,15 @@ public class LibIO {
 			case BOOK:
 				result = ( Edition )stringToBook( lines );
 				break;
-			case MAGAZIN:
+			case MAGAZINE:
+				result = ( Edition )stringToMagazine( lines );
 				break;
 		}
 		return result;
+	}
+	
+	private static Magazine stringToMagazine( String[] lines ) {
+		return new Magazine( lines[ 1 ], lines[ 2 ], Integer.parseInt(lines[ 3 ]) );
 	}
 	
 	private static Book stringToBook( String[] lines ) {
