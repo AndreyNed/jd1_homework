@@ -61,10 +61,9 @@ public class LibIO {
 		}
 		File file = new File ( fileName );
 		if ( file.exists() ) {
-			//System.out.println("File of default library has been found!");
 			BufferedReader br = null;
 			try {
-				String[] lines = new String[ 100 ];
+				String[] lines = new String[ stringCountCalculate( new BufferedReader( new FileReader( file ) ) ) ];
 				br = new BufferedReader( new FileReader( file ) );
 				int i = 0;
 				while ( br.ready() ) {
@@ -82,6 +81,16 @@ public class LibIO {
 		}
 		
 		return result;
+	}
+	
+	public static int stringCountCalculate( BufferedReader br ) throws IOException {
+		int count = 0;
+		while ( br.ready() ){
+			br.readLine();
+			count++;
+		}
+		br.close();
+		return count;
 	}
 	
 	public static Edition stringToEdition( String line ) {
