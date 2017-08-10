@@ -8,6 +8,10 @@ public abstract class Edition {
 	public static final String NONAME = "NONAME";
 	public static final String UNKNOWN = "UNKNOWN";
 	
+	public Edition() {
+		
+	}
+
 	public Edition(String title, String year) {
 		super();
 		if ( (title == null) || (title.trim().length() < 1) ) {
