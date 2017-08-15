@@ -21,15 +21,15 @@ public class MainServer {
 		ObjectOutputStream oos = null;
 		Group group = new Group(5);
 		Student student = new Student( "Vasia", 100, group );
-		A a = new A();
-		a.value = "A";
+		//A a = new A();
+		//a.value = "A";
 		try{
 			fos = new FileOutputStream( FILE_NAME );
 			oos = new ObjectOutputStream( fos );
 			student.univer = "BSUIR";
 			student.avg = 5;
-			//oos.writeObject( student );
-			oos.writeObject(a);
+			oos.writeObject( student );
+			//oos.writeObject(a);
 		} 
 		catch( NotSerializableException e ) {
 			e.printStackTrace();

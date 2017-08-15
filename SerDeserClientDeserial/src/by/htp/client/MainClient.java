@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 import by.htp.test.A;
+import by.htp.univer.entity.Student;
 
 
 public class MainClient {
@@ -14,12 +15,12 @@ public class MainClient {
 	
 	public static void main(String[] args) {
 		
-		//Student.univer = "BSU";
-		//Object studentAfter = deserialize();
-		//System.out.println(studentAfter);
+		Student.univer = "BSU";
+		Object studentAfter = deserialize();
+		System.out.println(studentAfter);
 		
-		A a = ( A )deserialize();
-		System.out.println( a.value );
+		//A a = ( A )deserialize();
+		//System.out.println( a.value );
 	}
 	
 	public static Object deserialize(){
@@ -38,7 +39,7 @@ public class MainClient {
 		} catch ( ClassNotFoundException e ) {
 			e.printStackTrace();
 		} finally {
-
+			//ois.close();
 		}
 		
 		return obj;
