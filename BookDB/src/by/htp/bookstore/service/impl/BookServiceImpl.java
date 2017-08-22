@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import by.htp.bookstore.dao.BookDao;
+import by.htp.bookstore.dao.DaoException;
 import by.htp.bookstore.dao.impl.BookFileImpl;
 import by.htp.bookstore.dao.impl.BookMySQLImpl;
 import by.htp.bookstore.domain.entity.Book;
@@ -27,6 +28,30 @@ public class BookServiceImpl implements BookService {
 		Catalog catalog = new Catalog( catalogTitle, dateCreation, books );
 		
 		return catalog;
+	}
+
+	@Override
+	public void addNewBook(Book book) {
+		if ( book != null ) {
+			try {
+				dao.addBook(book);
+			} catch (DaoException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
+	public Book getBook(int id) {
+		Book book = null;
+		if ( id != 0 ) {
+			try {
+				book = dao.readBook(id);
+			} catch (DaoException e) {
+				e.printStackTrace();
+			}
+		}
+		return book;
 	}
 	
 }

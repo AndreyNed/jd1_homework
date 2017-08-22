@@ -8,4 +8,12 @@ public interface BookDao {
 	
 	List<Book> readBooks();
 	
+	Book readBook( int id ) throws DaoException;
+	
+	void deleteBook( int id );
+	
+	void addBook( Book book ) throws DaoException;
+	
+	void updateBook( Book book );
+	
 }

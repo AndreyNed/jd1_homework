@@ -19,4 +19,28 @@ public class BookFileImpl implements BookDao {
 		
 		return books;
 	}
+
+	@Override
+	public Book readBook(int id) {
+		//throw new OperationNotSupportedException();
+		return null;
+	}
+
+	@Override
+	public void deleteBook(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addBook(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateBook(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
 }

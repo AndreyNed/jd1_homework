@@ -1,9 +1,15 @@
 package by.htp.bookstore.service;
 
+import by.htp.bookstore.dao.DaoException;
+import by.htp.bookstore.domain.entity.Book;
 import by.htp.bookstore.domain.vo.Catalog;
 
 public interface BookService {
 	
 	Catalog getBookCatalog();
+	
+	void addNewBook( Book book ) throws DaoException;
+	
+	Book getBook( int id );
 	
 }
