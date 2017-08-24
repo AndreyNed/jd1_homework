@@ -22,6 +22,7 @@ public class BookMySQLImpl extends AbstractDao implements BookDao {
 	private static final String SQL_INSERT_BOOK = "INSERT INTO book (`title`, `pages`) VALUES ( ?, ? )";
 	private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
 	private static final String SQL_SELECT_BOOK = "select * from book where id = ?";
+	private static final String SQL_DELETE_BOOK = "DELETE FROM book WHERE id = ?";
 
 	@Override
 	public List<Book> readBooks() {
@@ -93,7 +94,43 @@ public class BookMySQLImpl extends AbstractDao implements BookDao {
 
 	@Override
 	public void deleteBook(int id) {
-		// TODO Auto-generated method stub
+		PreparedStatement ps = null;
+		Connection cn = null;
+		
+		try {
+			Class.forName(DB_DRIVER);
+
+			cn = DriverManager.getConnection(DB_URL, DB_USR, DB_PAS);
+
+			try {
+				ps = cn.prepareStatement(SQL_DELETE_BOOK);
+
+				ps.setInt( 1, id );
+				ps.executeQuery();
+				//ps.executeUpdate();
+			} catch (SQLException e) {
+				try {
+					throw new DaoException("Problem with deleting book", e);
+				} catch (DaoException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			} finally {
+				closeStatement(ps);
+			}
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			try {
+				throw new DaoException("Problem with database connection", e);
+			} catch (DaoException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		} finally {
+			closeConnection(cn);
+		}
 
 	}
 

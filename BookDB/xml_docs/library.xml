@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<books xmlns="http://www.it-academy.by/librarySchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.it-academy.by/librarySchema library_schema.xsd">
+	<book id="1">
+		<isbn number="0000" />
+		<title>
+			Book1
+		</title>
+		<pages>
+			10
+		</pages>
+		<author>
+			<name>
+				Author1
+			</name>
+			<date-of-birth>
+				1962-11-07
+			</date-of-birth>
+		</author>
+		<author>
+			<name>
+				Author11
+			</name>
+			<date-of-birth>
+				1960-11-07
+			</date-of-birth>
+		</author>
+	</book>
+	
+	<book id="2">
+		<isbn number="0001" />
+		<title>
+			Book2
+		</title>
+		<pages>
+			20
+		</pages>
+		<author>
+			<name>
+				Author2
+			</name>
+			<date-of-birth>
+				1965-06-24
+			</date-of-birth>
+		</author>
+	</book>
+	
+	<book id="3">
+		<isbn number="0003" />
+		<title>
+			Book3
+		</title>
+		<pages>
+			50
+		</pages>
+		<author>
+			<name>
+				Author3
+			</name>
+			<date-of-birth>
+				1974-12-07
+			</date-of-birth>
+		</author>
+	</book>
+	
+	<book id="4">
+		<isbn number="0004" />
+		<title>
+			Book3
+		</title>
+		<pages>
+			50
+		</pages>
+		<author>
+			<name>
+				Author3
+			</name>
+			<date-of-birth>
+				1974-12-07
+			</date-of-birth>
+		</author>
+	</book>
+</books>
