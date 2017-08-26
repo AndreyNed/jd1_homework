@@ -7,6 +7,7 @@ import by.htp.bookstore.dao.BookDao;
 import by.htp.bookstore.dao.DaoException;
 import by.htp.bookstore.dao.impl.BookFileImpl;
 import by.htp.bookstore.dao.impl.BookMySQLImpl;
+import by.htp.bookstore.dao.impl.sax.BookSaxParser;
 import by.htp.bookstore.domain.entity.Book;
 import by.htp.bookstore.domain.vo.Catalog;
 import by.htp.bookstore.service.BookService;
@@ -14,8 +15,11 @@ import by.htp.bookstore.service.BookService;
 public class BookServiceImpl implements BookService {
 	
 	//change to Factory
-	private BookDao dao = new BookMySQLImpl();
+	//private BookDao dao = new BookMySQLImpl();
 	//private BookDao dao = new BookFileImpl();	
+	private BookDao dao = new BookSaxParser();
+	//private BookDao dao = new BookStaxParser();
+	//private BookDao dao = new BookDOMParser();
 
 	@Override
 	public Catalog getBookCatalog() {

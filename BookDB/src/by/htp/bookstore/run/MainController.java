@@ -18,25 +18,25 @@ public class MainController {
 		Catalog catalog = bookService.getBookCatalog();
 		outputer.printBookCatalog(catalog);
 		
-		Book book = new Book( 10, "Book123", 123 );
-		bookService.addNewBook(book);
+		//Book book = new Book( 10, "Book123", 123 );
+		//bookService.addNewBook(book);
 		
 		System.out.println();
-		System.out.println("Catalog after adding new book");
+		//System.out.println("Catalog after adding new book");
 		
-		catalog = bookService.getBookCatalog();
-		outputer.printBookCatalog(catalog);
+		//catalog = bookService.getBookCatalog();
+		//outputer.printBookCatalog(catalog);
 		
-		System.out.println();
+		//System.out.println();
 		
-		book = bookService.getBook(1);
+		//book = bookService.getBook(1);
 		
-		System.out.println(book);
+		//System.out.println(book);
 		
 		
-		book = bookService.getBook(100);
+		//book = bookService.getBook(100);
 		
-		System.out.println(book);
+		//System.out.println(book);
 		
 		
 		
