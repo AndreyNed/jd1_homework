@@ -28,7 +28,7 @@ public class LinkLibrary {
 		for ( int i = 0; i < index; i++ ){
 			previous = previous.getNext();
 		}
-		Node
+		//Node
 	}
 
 }

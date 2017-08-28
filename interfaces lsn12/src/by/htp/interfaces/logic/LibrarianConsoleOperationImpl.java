@@ -33,4 +33,10 @@ public class LibrarianConsoleOperationImpl implements LibrarianOperation {
 		return book;
 	}
 
+	@Override
+	public Catalog sortCatalog(Catalog catalog) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

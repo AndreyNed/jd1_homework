@@ -15,6 +15,12 @@ public class LibrarianDefaultOperationImpl implements LibrarianOperation{
 		
 		return catalog;
 	}
+
+	@Override
+	public Catalog sortCatalog(Catalog catalog) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

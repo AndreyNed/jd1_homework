@@ -46,15 +46,15 @@ public class Main {
 		Person[] persons = new Person[7];
 		
 		
-		Person p1 = new Person( 33, "Саша", 1000 );
-		Person p2 = new Person( 40, "Вася", 566 );
-		Person p3 = new Person( 55, "Толик", 1000000000 );
-		Person p4 = new Person( 30, "Паша", 900 );
-		Person p5 = new Person( 21, "Колян", 5000 );
-		Person p6 = new Person( 15, "Гена", 5001 );
-		Person p7 = new Person( 22, "Гоша", 5000 );
-		Person p8 = new Person( 103, "Калистрат", 44444 );
-		Person p9 = new Person( 103, "Инокентий", 44444 );
+		Person p1 = new Person( 33, "РЎР°С€Р°", 1000 );
+		Person p2 = new Person( 40, "Р’Р°СЃСЏ", 566 );
+		Person p3 = new Person( 55, "РўРѕР»РёРє", 1000000000 );
+		Person p4 = new Person( 30, "РџР°С€Р°", 900 );
+		Person p5 = new Person( 21, "РљРѕР»СЏРЅ", 5000 );
+		Person p6 = new Person( 15, "Р“РµРЅР°", 5001 );
+		Person p7 = new Person( 22, "Р“РѕС€Р°", 5000 );
+		Person p8 = new Person( 103, "РљР°Р»РёСЃС‚СЂР°С‚", 44444 );
+		Person p9 = new Person( 103, "Р�РЅРѕРєРµРЅС‚РёР№", 44444 );
 
 		persons[0] = p1;
 		persons[1] = p2;
@@ -240,7 +240,6 @@ class Person /*implements Comparable<Person>*/{
 		return true;
 	}
 
-	@Override
 	public int compareTo(Person p) {
 		return this.getAge() - p.getAge();
 	}
