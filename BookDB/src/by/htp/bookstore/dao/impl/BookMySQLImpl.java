@@ -53,7 +53,7 @@ public class BookMySQLImpl extends AbstractDao implements BookDao {
 			e.printStackTrace();
 		}
 
-		return books;
+		return  books /*books*/;
 	}
 
 	@Override
