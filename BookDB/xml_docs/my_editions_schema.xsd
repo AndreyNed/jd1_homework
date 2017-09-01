@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/my_editions_schema"
+	xmlns:tns="http://www.example.org/my_editions_schema"
+	elementFormDefault="qualified">
+	
+	<xs:element name="editions" type="tns:editions_type" />
+	
+	<xs:complexType name="editions_type">
+		<xs:sequence>
+			<xs:element name="book" type="tns:book_type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="journal" type="tns:journal_type" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="book_type">
+	
+	</xs:complexType>
+	
+	<xs:complexType name="journal_type">
+	
+	</xs:complexType>
+	
+</xs:schema>

@@ -1,0 +1,25 @@
+body {
+	background: blue;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.hello {
+	position: absolute;
+	top: 5em;
+	left: 50%;
+	transform: translateX( -50% );
+	/* margin: 0 auto; */
+	background-color: blue;
+	color: white;
+	font-size: 4em;
+	text-align: center;
+	
+}
+
+.hello:hover {
+	color: yellow;
+	text-shadow: 1px 3px 5px black;
+}
